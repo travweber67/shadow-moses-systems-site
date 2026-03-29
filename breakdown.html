@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shadow Moses Systems — Full Breakdown</title>
+  <meta name="description" content="Full service breakdown for Shadow Moses Systems Lead Response System Cleanup offer." />
+  <style>
+    :root {
+      --bg: #07101d;
+      --bg-2: #0b1529;
+      --panel: rgba(18, 26, 52, 0.94);
+      --panel-2: rgba(23, 34, 67, 0.96);
+      --text: #eef3ff;
+      --muted: #b2bfdc;
+      --line: rgba(113, 136, 201, 0.22);
+      --accent: #7dd3fc;
+      --accent-2: #60a5fa;
+      --good: #86efac;
+      --bad: #fca5a5;
+      --shadow: 0 24px 80px rgba(0,0,0,.38);
+      --radius: 22px;
+      --max: 1160px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, Segoe UI, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(125,211,252,.14), transparent 28%),
+        radial-gradient(circle at top right, rgba(139,92,246,.12), transparent 24%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .nav {
+      position: sticky; top: 0; z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(7,16,29,.72);
+      border-bottom: 1px solid rgba(125,211,252,.08);
+    }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; gap:18px; min-height:72px; }
+    .brand { display:flex; flex-direction:column; gap:2px; }
+    .brand strong { font-size:.95rem; letter-spacing:.04em; text-transform:uppercase; }
+    .brand span, .muted { color: var(--muted); }
+    .nav-links { display:flex; gap:18px; align-items:center; flex-wrap:wrap; color: var(--muted); font-size:.95rem; }
+    .hero { padding: 76px 0 42px; border-bottom:1px solid var(--line); }
+    .eyebrow {
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+      border:1px solid rgba(125,211,252,.18); background:rgba(125,211,252,.08);
+      color:var(--accent); font-size:.82rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+    }
+    h1 { font-size: clamp(2.3rem, 5vw, 4.4rem); line-height:1; margin:18px 0 16px; letter-spacing:-.04em; max-width:900px; }
+    h2 { font-size: clamp(1.8rem, 3vw, 2.5rem); line-height:1.05; margin:0 0 12px; letter-spacing:-.03em; }
+    h3 { margin:0 0 10px; }
+    .sub { font-size:1.1rem; color:var(--muted); max-width:800px; }
+    .cta-row { display:flex; gap:14px; flex-wrap:wrap; margin-top:26px; }
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 18px;
+      border-radius:14px; font-weight:700; border:1px solid var(--line); transition:.18s ease;
+    }
+    .btn:hover { transform:translateY(-1px); }
+    .btn.primary { color:#07111d; background:linear-gradient(135deg,var(--accent),var(--accent-2)); box-shadow:0 10px 30px rgba(96,165,250,.28); }
+    .btn.secondary { background:rgba(17,26,47,.75); color:var(--text); }
+    section { padding: 54px 0; }
+    .grid { display:grid; gap:18px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card {
+      background:linear-gradient(180deg, rgba(19,29,55,.96), rgba(15,23,44,.96));
+      border:1px solid var(--line); border-radius: var(--radius); padding:22px; box-shadow:0 18px 50px rgba(0,0,0,.18);
+    }
+    .price-card {
+      background:radial-gradient(circle at top right, rgba(125,211,252,.18), transparent 42%), linear-gradient(180deg, rgba(20,30,59,.98), rgba(14,22,43,.98));
+    }
+    .price { font-size:2.5rem; font-weight:900; letter-spacing:-.04em; margin:4px 0; }
+    .price-small { font-size:1.65rem; font-weight:800; margin-top:20px; }
+    ul { padding-left: 20px; }
+    li { margin: 9px 0; }
+    .label { color: var(--accent); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; margin-bottom:10px; }
+    .split-note { margin-top:18px; padding-top:18px; border-top:1px solid rgba(255,255,255,.08); color:var(--muted); }
+    .fit { color: var(--good); }
+    .notfit { color: var(--bad); }
+    .steps { list-style:none; padding:0; margin:0; counter-reset:step; display:grid; gap:12px; }
+    .steps li {
+      counter-increment:step; position:relative; padding:18px 18px 18px 62px;
+      border-radius:18px; border:1px solid var(--line); background:linear-gradient(180deg, rgba(19,28,52,.95), rgba(15,22,40,.95));
+    }
+    .steps li::before {
+      content: counter(step); position:absolute; left:18px; top:16px; width:30px; height:30px; display:grid; place-items:center;
+      border-radius:999px; background:linear-gradient(135deg,var(--accent),var(--accent-2)); color:#07111d; font-weight:900;
+    }
+    .footer-cta {
+      padding:28px; border-radius:26px; border:1px solid rgba(125,211,252,.16);
+      background:radial-gradient(circle at top right, rgba(125,211,252,.14), transparent 30%), linear-gradient(180deg, rgba(20,30,57,.98), rgba(14,21,39,.98));
+      box-shadow:var(--shadow);
+    }
+    .pill-row { display:flex; flex-wrap:wrap; gap:8px; margin-top:16px; }
+    .pill { display:inline-flex; align-items:center; padding:8px 10px; border-radius:999px; border:1px solid var(--line); background:rgba(255,255,255,.03); color:var(--muted); font-size:.86rem; }
+    @media (max-width: 920px) { .nav-inner { padding:10px 0; align-items:flex-start; } }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap nav-inner">
+      <div class="brand">
+        <strong>Shadow Moses Systems</strong>
+        <span>Full offer breakdown</span>
+      </div>
+      <div class="nav-links">
+        <a href="./index.html">Landing page</a>
+        <a href="#included">Included</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Full breakdown</span>
+      <h1>Lead Response System Cleanup</h1>
+      <p class="sub">This is the fuller breakdown of what Shadow Moses Systems actually does, who it’s for, what’s included, how pricing works, and what the next step looks like.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=shadowmoses.systems@gmail.com&su=Interested%20in%20Lead%20Response%20System%20Cleanup&tf=cm" target="_blank" rel="noopener noreferrer">Contact Shadow Moses Systems</a>
+        <a class="btn secondary" href="./index.html">Back to landing page</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section>
+      <div class="label">What this solves</div>
+      <h2>Most small service businesses don’t need more random software. They need one messy workflow cleaned up.</h2>
+      <p class="sub">For local service businesses, that workflow is often lead response: who called, who still needs a callback, who asked for an estimate, what’s been answered, and what’s still sitting there cooling off.</p>
+      <div class="grid grid-3">
+        <div class="card"><h3>Missed callbacks</h3><p class="muted">Leads come in while work is happening, then follow-up gets delayed or forgotten.</p></div>
+        <div class="card"><h3>Scattered follow-up</h3><p class="muted">Texts, calls, Facebook messages, and quote requests live in too many places.</p></div>
+        <div class="card"><h3>No clean next-step visibility</h3><p class="muted">Too much of the process depends on memory instead of a repeatable system.</p></div>
+      </div>
+    </section>
+
+    <section id="included">
+      <div class="label">What’s included</div>
+      <h2>The starter setup focuses on one thing: fixing the lead-response workflow.</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Included in the starter</h3>
+          <ul>
+            <li>Quick review of your current lead/follow-up process</li>
+            <li>Identification of where leads are getting lost</li>
+            <li>One practical callback/follow-up workflow setup</li>
+            <li>Lead tracking structure your business can actually use</li>
+            <li>Callback/message templates</li>
+            <li>Simple SOP so the process is usable in real life</li>
+            <li>One refinement pass after setup</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>What this is not</h3>
+          <ul>
+            <li>Not a giant custom software build</li>
+            <li>Not vague AI consulting</li>
+            <li>Not a fully autonomous sales department overnight</li>
+            <li>Not a guarantee that every lead closes</li>
+            <li>Not a replacement for every tool you already use</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">Best fit</div>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 class="fit">Good fit if</h3>
+          <ul>
+            <li>You run a local service business</li>
+            <li>You get leads from phone, text, Facebook, or your website</li>
+            <li>You think good leads may be getting delayed or missed when things get busy</li>
+            <li>You want one workflow cleaned up first</li>
+            <li>You want a practical fix, not a giant software project</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 class="notfit">Not a fit if</h3>
+          <ul>
+            <li>You want full automation overnight</li>
+            <li>You want enterprise scope at starter pricing</li>
+            <li>You have no inbound leads to improve</li>
+            <li>You want hype instead of operational clarity</li>
+          </ul>
+        </div>
+      </div>
+      <div class="pill-row">
+        <span class="pill">Landscapers</span>
+        <span class="pill">Outdoor service</span>
+        <span class="pill">Exterior cleaning</span>
+        <span class="pill">Owner-operators</span>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="label">Pricing</div>
+      <div class="grid grid-2">
+        <div class="card price-card">
+          <h3>Starter Setup</h3>
+          <div class="price">$497</div>
+          <p class="muted">One-time setup to fix the lead-response workflow and leave you with a cleaner operating system.</p>
+          <div class="split-note">Focused first-fix pricing, not a giant open-ended consulting engagement.</div>
+        </div>
+        <div class="card price-card">
+          <h3>Optional Monthly Ops</h3>
+          <div class="price-small">$197/mo</div>
+          <p class="muted">For small fixes, cleanup, improvements, and keeping the workflow from drifting back into a mess.</p>
+          <div class="split-note">This is optional. The starter setup stands on its own.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="label">How it works</div>
+      <h2>A practical five-step process.</h2>
+      <ol class="steps">
+        <li>Review where lead follow-up is breaking</li>
+        <li>Simplify the workflow</li>
+        <li>Set up the practical version</li>
+        <li>Refine it after review</li>
+        <li>Maintain it if you want ongoing support</li>
+      </ol>
+    </section>
+
+    <section id="contact">
+      <div class="footer-cta">
+        <div class="label">Next step</div>
+        <h2>If this looks like the right first fix, reach out.</h2>
+        <p class="sub">If you want to see whether your business is a fit, or you want the starter setup conversation, contact Shadow Moses Systems and we’ll take the next step from there.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="https://mail.google.com/mail/u/1/?view=cm&fs=1&to=shadowmoses.systems@gmail.com&su=Interested%20in%20Lead%20Response%20System%20Cleanup&tf=cm" target="_blank" rel="noopener noreferrer">Contact Shadow Moses Systems</a>
+          <a class="btn secondary" href="./index.html">Back to landing page</a>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
